@@ -1,0 +1,3 @@
+* send a mail to the selected opponent asking to confirm the played game
+* release the website on a proposer server
+* actual test behind the mail/id/password condition (server side or embedded into the website)
