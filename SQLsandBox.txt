@@ -1,0 +1,69 @@
+%%%% DATABASES CREATION %%%%
+
+CREATE TABLE game_history (
+	id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	id_usr SMALLINT UNSIGNED NOT NULL,
+    opponent VARCHAR(40) NOT NULL,
+    score CHAR(1) NOT NULL,
+    elo SMALLINT NOT NULL,
+    date DATETIME NOT NULL,
+    PRIMARY KEY (id)
+)
+ENGINE=INNODB;
+
+CREATE TABLE users (
+	id_usr SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    player_name VARCHAR(40) NOT NULL,
+    password VARCHAR(40) NOT NULL,
+    elo SMALLINT NOT NULL DEFAULT '1500',
+    PRIMARY KEY (id_usr)
+)
+ENGINE=INNODB;	
+
+
+%%%% DATABASES binding %%%%
+
+ALTER TABLE game_history
+ADD CONSTRAINT fk_unique_player
+FOREIGN KEY (id_usr) REFERENCES users (id_usr);
+
+
+%%%% TEST Query insert into database example %%%%
+INSERT into game_history(opponent, id_usr, score, elo, date)
+VALUES('Ben', '1','W', '2500', '2009-09-03 05:12:00')
+
+
+INSERT into game_history(opponent, id_usr, score, elo, date)
+VALUES('Gabor', '2', 'W', '1020', '2009-09-04 05:13:00')
+
+%OR%
+
+INSERT INTO game_history
+SET opponent='Bobo', score='L', elo='1090', date='2010-07-21 16:41:00';
+
+%%%% fetch from database example %%%%
+
+select opponent, score
+from game_history
+
+select score from game_history where opponent = 'Gabor'
+
+SELECT * 
+FROM game_history 
+ORDER BY score;
+
+%%%% save database
+mysqldump --column-statistics=0 -u root tischtenniz > C:\tischtenniz.db
+%%%% 
+INSERT INTO users
+SET player_name='cad', password='mashedCarrot'
+SET player_name='aa', password='1'
+SET player_name='z', password='2'
+SET player_name='b', password='3'
+
+SELECT *
+FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS
+WHERE TABLE_NAME = 'users'
+
+%%%%%%%%% DELETE ELEMENT FROM A DATABASE
+DELETE FROM game_history WHERE opponent='Shinji';

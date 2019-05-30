@@ -1,0 +1,247 @@
+/* general */
+
+body {
+    font-family: Calibri;
+    font-size: 13pt;
+    margin: 0px auto; 
+    max-width: 800px; 
+    padding: 0px 10px; 
+}
+
+a {
+    color: black;
+}
+
+.cf:after { /* clear floats */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* header & navi */
+
+div.header {
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+nav#filters { 
+    margin: 0px; 
+    // padding: 5px; 
+    border-bottom: 3px solid #2e4258;
+}
+
+nav#filters .button_group {
+    margin: 5px 5px 0px; 
+}
+
+nav#filters a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 11px;
+    margin-right: 2px;
+    border-radius: 3px 3px 0px 0px;
+    background-color: #d3d7dc;
+}
+
+nav#filters a.hgl {
+    background-color: #2e4258;
+    color: #fff;
+    font-weight: bold; 
+    padding-top: 7px;
+    margin-top: -7px;
+}
+
+/* item list */
+
+div.item_list {
+    padding: 10px 0px 0px; 
+}
+
+div.item {
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: 10px;
+}
+
+div.item_head {
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: 15px center;
+    margin: 0px;
+    padding: 9px 42px; 
+    cursor: pointer;
+}
+
+span.ver_diff_info {
+    font-size: .8em;
+    color: grey;
+    margin: 0px 9px 8px;
+    display: inline-block;
+}
+
+div.COVERED {
+    border-color: #68a490;
+}
+
+div.COVERED > .item_head {
+    background-image: url('img/COVERED.png');
+}
+
+div.OUTDATED {
+    border-color: #eac282;
+}
+
+div.OUTDATED > .item_head {
+    background-image: url('img/OUTDATED.png');
+}
+
+div.NOT_COVERED {
+    border-color: #d65532;
+}
+
+div.NOT_COVERED > .item_head {
+    background-image: url('img/NOT_COVERED.png');
+}
+
+div.INEXISTENT {
+    border-color: #cccccc;
+}
+
+div.INEXISTENT > .item_head {
+    background-image: url('img/INEXISTENT.png');
+}
+
+/* detail view */
+
+div.mentions {
+    padding: 17px 20px 22px; 
+    /* display: none; */
+}
+
+div.text_description {
+    /* clear: both; */
+    
+    padding: 9px 11px;
+    margin-bottom: 12px;
+    
+    border-radius: 4px;
+    box-shadow: #bbb 0px 0px 2px inset;
+    border: 1px solid #ccc;
+    
+    font-size: 11pt; 
+    max-height: 20em;
+    overflow: auto;
+    white-space: pre-wrap;
+}
+
+div.text_description b {
+    color: #fd6d26; 
+}
+
+div.mentions div.sw_link {
+    float: right; 
+    padding: 3px 8px; 
+}
+
+div.mentions div.sw_link textarea {
+    resize: none;
+    overflow: hidden; 
+    border: 0px;
+    text-align: right;
+}
+
+div.mentions div.sw_link a img {
+    height: 16px;
+}
+
+div.code_mentions {
+    display: inline-block; 
+    /* border-top: 1px dashed #e8e8e8; */
+}
+
+/* div.code_mentions > div {
+    border-bottom: 1px dashed #e8e8e8;
+} */
+
+div.file {
+    /* border: 1px solid #eee;  */
+    
+}
+
+div.file:not(:last-child) {
+    margin-bottom: 8px; 
+}
+
+a.fname {
+    display: inline-block;
+    font: 10pt monospace; 
+    margin-bottom: 5px; 
+    padding: 5px 8px; 
+    text-decoration: none; 
+}
+
+a.btn {
+    overflow: hidden; 
+    display: inline-block; 
+    background-color: white; 
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-size: 16px 16px; 
+    height: 22px;
+    width: 22px; 
+}
+
+div.mentioned_sections {
+    margin: 1px 20px;
+}
+
+div.mentioned_single_appearances {
+    margin: 1px 20px;
+}
+
+a.btn:hover {
+    background-size: cover; 
+}
+
+a.hglt {
+    background-image: url("img/square-info.png");
+    margin-right: 14px;
+}
+
+a.replace {
+    background-image: url("img/square-edit.png");
+}
+
+/* a.hglt_top { */
+    /* background-image: url("img/square-triangle-left.png"); */
+/* } */
+
+/* a.hglt_btm { */
+    /* background-image: url("img/square-triangle-right.png"); */
+/* } */
+
+/* old */
+
+/*
+
+.wrapper {
+  display: grid;
+  grid-template-columns: max-content auto;
+  grid-gap: 10px;
+  margin: 10px;
+  background-color: #fff;
+  color: #444;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+*/
+
